@@ -21,7 +21,14 @@ export default function Feed({ selectedThread }) {
   
         // Fetch posts by thread
         axios.get(postUrl)
-          .then((res) => setData(res.data.posts.slice(0, 10))) // Adjust based on your API response
+          .then((res) => {
+            const posts = res.data.posts;
+            if (Array.isArray(posts)) {
+              setData(posts.slice(0, 10));
+            } else {
+              setData([]);
+            }
+          }) // Adjust based on your API response
           .catch(console.error);
   
         // Fetch thread name
