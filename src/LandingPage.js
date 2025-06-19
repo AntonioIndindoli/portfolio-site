@@ -62,14 +62,14 @@ const LandingPage = () => {
           <Card
             imageSrc={album}
             caption="Explore The NutPack Album"
-            link="/Album"
+            link="https://open.spotify.com/"
             description="A collection of fun, eclectic tracks. Also available on Spotify."
           />
 
           <Card
             imageSrc={soon}
             caption="Release TBD"
-            link="/"
+            link="#"
             description="Exciting new projects in development. Stay tuned!"
           />
 
