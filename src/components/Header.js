@@ -1,7 +1,7 @@
 import React from "react";
 import "../LandingPage.css";
 import Cookies from "universal-cookie";
-import logo from "../images/mayunays.netlogo.png";
+import logo from "../logo.png";
 import { Col, Row, Form, Button } from "react-bootstrap";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 const cookies = new Cookies();
@@ -17,10 +17,10 @@ const Header = () => {
       <div className="header-bar">
         <header className="header-items">
           <button
-            className="MayunsGames-button"
+            className="logo-button"
             onClick={() => navigate("/")}
           >
-            <img src={logo} className="logo-image"/>
+            <img src={logo} alt="Antonio Indindoli logo" className="logo-image" />
           </button>
           <div className="header-items-bar">
             <button
@@ -29,7 +29,7 @@ const Header = () => {
               type="submit"
               onClick={(e) => navigate("/forums")}
             >
-              Forums
+              Projects
             </button>
             {!token && (
               <>

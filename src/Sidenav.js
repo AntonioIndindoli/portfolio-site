@@ -19,7 +19,7 @@ export default function Sidenav() {
                     type="submit"
                     onClick={(e) => navigate('/')}
                 >
-                    <img className="logo" src={logo} alt="logo" />MayunsHub
+                    <img className="logo" src={logo} alt="logo" />Portfolio
                 </Button>
                 <a className='sidenav-text' href="/auth">User List</a>
             </div >
