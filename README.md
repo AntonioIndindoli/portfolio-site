@@ -1,4 +1,4 @@
-# Game Development Hub
+# Personal Website
 
 > **MERN portfolio & blog**
 
@@ -6,7 +6,6 @@
 
 ## Table of Contents
 
-* [Features](#features)
 * [Tech Stack](#tech-stack)
 * [Local Development](#local-development)
 
@@ -18,17 +17,6 @@
   * [Option B – Two Services (API + Static Site)](#optionb)
 * [Project Structure](#project-structure)
 * [Environment Variables](#environment-variables)
-
----
-
-## Features
-
-* **Showcase Projects** – highlight releases such as *The Backrooms: Unseen Tapes*.
-* **Blog** – share dev logs and release notes.
-* **Role‑playing Web Game** – engage visitors with an interactive mini‑game.
-* **Responsive Design** – mobile‑first, looks great on any screen.
-
----
 
 ## Tech Stack
 
