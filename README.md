@@ -38,14 +38,16 @@ This repository contains the source for the personal portfolio site of **Antonio
 
 ```bash
 # 1. Clone
-$ git clone https://github.com/yourusername/gamedev-company-website.git
-$ cd gamedev-company-website
+$ git clone https://github.com/yourusername/portfolio-site.git
+$ cd portfolio-site
 
-# 2. Install deps
+# 2. Install dependencies
 $ npm install
 
-# 3. Start the dev server
+# 3. Start the development server
 $ npm start
+
+# The site will be available at http://localhost:3000
 ```
 
 ---
