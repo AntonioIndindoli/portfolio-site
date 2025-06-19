@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df1ddd31.css",
+    "main.js": "/static/js/main.2c5ac108.js",
+    "static/media/nutpack.jpg": "/static/media/nutpack.edc3ce1e082ff316f8be.jpg",
+    "static/media/HomeLogo.png": "/static/media/HomeLogo.0116d875c67a32426b7e.png",
+    "static/media/backroomsGameImage.png": "/static/media/backroomsGameImage.15f08a8ab4b30d11c05f.png",
+    "static/media/copyright.png": "/static/media/copyright.22674b119843afb82fd9.png",
+    "static/media/logo.png": "/static/media/logo.e081601f20a221b4e6d9.png",
+    "static/media/mayunays.netlogo.png": "/static/media/mayunays.netlogo.14ee7e8eb7f66a4f2597.png",
+    "static/media/Comingsoon.png": "/static/media/Comingsoon.2a7af70433b9cf35ffe7.png",
+    "static/media/placeholder.png": "/static/media/placeholder.08cf6624304dadc88aa0.png",
+    "index.html": "/index.html",
+    "main.df1ddd31.css.map": "/static/css/main.df1ddd31.css.map",
+    "main.2c5ac108.js.map": "/static/js/main.2c5ac108.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df1ddd31.css",
+    "static/js/main.2c5ac108.js"
+  ]
+}
