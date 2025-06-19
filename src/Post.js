@@ -20,7 +20,7 @@ export default function Post() {
         // Fetch threads when component mounts
         axios.get(`${process.env.REACT_APP_API_URL}/threads`)
             .then((response) => {
-                setThreads(response.data.threads);
+                setThreads(response.data.threads || []);
             })
             .catch((error) => console.error("There was an error fetching the threads:", error));
     }, []);
