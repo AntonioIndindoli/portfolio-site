@@ -13,7 +13,14 @@ export default function UserList() {
 
     useEffect(() => {
         axios.get(`${process.env.REACT_APP_API_URL}/users`)
-            .then((res) => setData(res.data.users))
+            .then((res) => {
+                const users = res.data.users;
+                if (Array.isArray(users)) {
+                    setData(users);
+                } else {
+                    setData([]);
+                }
+            })
             .catch(console.error);
     }, []);
 
