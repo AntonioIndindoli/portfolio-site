@@ -9,7 +9,7 @@ export default function Threads({ onSelectThread }) {
   useEffect(() => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/threads`)
-      .then((res) => setData(res.data.threads))
+      .then((res) => setData(res.data.threads || []))
       .catch(console.error);
   }, []);
 
