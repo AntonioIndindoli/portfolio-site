@@ -1,5 +1,7 @@
 # Personal Website
 
+This repository contains the source for the personal portfolio site of **Antonio Indindoli**.
+
 > **MERN portfolio & blog**
 
 ---

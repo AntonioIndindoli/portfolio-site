@@ -28,9 +28,9 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="Home-Message">Crafted with love.</div>
+      <div className="Home-Message">Antonio Indindoli</div>
       <div className="Home-Message-Subtext">
-        We do not produce or sell mayonnaise
+        Welcome to my personal portfolio
       </div>
       <div className="box-center-image"></div>
 
@@ -38,10 +38,10 @@ const LandingPage = () => {
       <div className="home-projects-and-cards">
         <div className="Home-Projects-Div">
 
-          <div className="Home-Projects">Our Projects</div>
+          <div className="Home-Projects">My Projects</div>
           <div className="center-divider"></div>
           <div className="Home-Projects-Subtext">
-            Including completed and in progress works
+            A selection of my recent work
           </div>
         </div>
         <div className="home-cards">
