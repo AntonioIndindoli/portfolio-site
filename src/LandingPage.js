@@ -23,88 +23,58 @@ const skills = [
 
 const projects = [
   {
-    title: 'Full-Stack Game Studio Portal & Community Hub',
-    period: 'June – Oct 2025',
-    tech: 'React.js • MongoDB',
-    description:
-      'A secure community platform that lets studios launch player forums, manage developer access, and host playable Unity WebGL demos in one place.',
+    title: 'Self-Published Survival Horror Experience',
     highlights: [
-      'JWT authentication with multi-tier role management for moderators, developers, and players',
-      'RESTful API powering customizable profiles, avatar uploads, and image-ready discussion threads',
-      'Self-hosted deployment migrated from Google Cloud with hardened firewall and monitoring',
-      'Embedded live Unity WebGL demo with streaming asset pipeline',
+      'Released a commercial Steam title, achieving 200+ paid downloads in the first month.',
+      'Designed gameplay systems including AI behavior trees, dynamic lighting, and procedural level generation.',
+      'Optimized rendering of thousands of models and dynamic lights in a scene to achieve over 60 FPS on typical PCs.',
+      'Oversaw all aspects of production — from prototyping to publishing and player feedback integration.',
     ],
-    links: [
-      { label: 'GitHub', href: 'https://github.com/indindoli/game-studio-portal' },
-      { label: 'Live Demo', href: 'https://portal.indindoli.dev' },
-    ],
+    links: [],
   },
   {
-    title: 'Self-Published Survival Horror Game',
-    period: 'Jan 2022 – Jun 2024',
-    tech: 'Unity • C#',
-    description:
-      'An atmospheric survival horror experience released on Steam, featuring dynamic AI systems and procedural level generation.',
+    title: 'Self-Published Unity Destruction Physics Toolkit',
     highlights: [
-      '200+ sales within the first month and a "Very Positive" community rating',
-      'AI director balances tension with adaptive behavior trees and sensory systems',
-      'Procedural layout generator assembles multi-storey environments in milliseconds',
-      'Deep performance profiling to optimize asset-heavy scenes across mid-tier GPUs',
+      'Developed a modular destruction framework to enable realistic structural collapses and fracturing.',
+      'Achieved high performance using optimization techniques like chunking, multithreading, and pooling.',
+      'Simplified developer workflows through custom tools for building structures all within the Unity Editor.',
+      'Provided comprehensive documentation for easy adoption by other developers.',
     ],
-    links: [
-      { label: 'Steam Page', href: 'https://store.steampowered.com/' },
-      { label: 'Trailer', href: 'https://www.youtube.com/' },
-    ],
-  },
-  {
-    title: 'Unity Destruction Physics Toolkit',
-    period: 'Jan 2024 – Oct 2025',
-    tech: 'Unity • C#',
-    description:
-      'A modular destruction framework for Unity teams that need cinematic collapses without sacrificing runtime performance.',
-    highlights: [
-      'Configurable chunking pipeline creates reusable fracture profiles for artists',
-      'Jobs-friendly multithreading with pooling to keep frame time stable during chaos',
-      'Shipped on the Unity Asset Store with full API documentation and tutorial scenes',
-      'Integrated telemetry to capture usage analytics for future updates',
-    ],
-    links: [
-      { label: 'Asset Store', href: 'https://assetstore.unity.com/' },
-      { label: 'GitHub', href: 'https://github.com/indindoli/destruction-toolkit' },
-    ],
+    links: [],
   },
   {
     title: 'Full-Stack University Matching Platform',
-    period: 'Aug – Dec 2024',
-    tech: 'React • Node • SQL • Google Cloud',
-    description:
-      'A recruitment platform pairing student athletes with universities using proprietary ranking algorithms and interactive mapping.',
     highlights: [
-      'Matchmaking engine scored 10k+ athlete/university combinations in under 200ms',
-      'Administrators configure program priorities through a secure dashboard',
-      'Google Maps overlay provides geo-filtering and travel-time visualization',
-      'Continuous integration pipeline deployed to Google Cloud Run with automated backups',
+      'Led the backend development of a platform that connects student-athletes with universities.',
+      'Devised a proprietary sorting algorithm to rank Universities based on data from 5,000+ U.S. Olympians.',
     ],
-    links: [
-      { label: 'GitHub', href: 'https://github.com/indindoli/university-matching-platform' },
-      { label: 'Demo', href: 'https://matching.indindoli.dev' },
+    links: [],
+  },
+  {
+    title: 'Real-Time Online Poker Platform',
+    highlights: [
+      'Built a full-stack multiplayer poker game with real-time gameplay via WebSockets.',
+      'Implemented synchronized game state, chat, and session management for concurrent users.',
+      'Utilized PostgreSQL for scalable data persistence and reliability.',
     ],
+    links: [],
+  },
+  {
+    title: 'Game Development Portfolio Website',
+    highlights: [
+      'Designed a modern web portfolio showcasing self-published games and development tools.',
+      'Focused on clean visual presentation, responsive layout, and accessible design for desktop and mobile.',
+      'Built a lightweight, static architecture optimized for performance and low hosting overhead.',
+    ],
+    links: [],
   },
   {
     title: 'Linux Storage Device Driver',
-    period: 'Mar – May 2023',
-    tech: 'C • CMake • VirtualBox • Git',
-    description:
-      'A block storage driver that delivers non-contiguous allocation and custom caching policies for a Linux-based virtual appliance.',
     highlights: [
-      'Implemented custom filesystem metadata structures with wear-leveling awareness',
-      'Engineered scatter/gather buffers to support high-throughput asynchronous reads',
-      'Automated kernel module builds with CMake and GitHub Actions',
-      'Documented developer environment provisioning for rapid onboarding',
+      'Configured and maintained a custom Linux virtual environment to develop and test a storage driver.',
+      'Gained hands-on experience with Linux system configuration and memory management at the OS level.',
     ],
-    links: [
-      { label: 'GitHub', href: 'https://github.com/indindoli/linux-storage-driver' },
-    ],
+    links: [],
   },
 ];
 
@@ -125,17 +95,6 @@ const LandingPage = () => {
                 Recent Computer Science graduate from San Francisco State University with hands-on experience shipping
                 commercial software, from games to full-stack web platforms.
               </p>
-              <div className="hero-actions">
-                <a className="button primary" href="#projects">View My Projects</a>
-                <a
-                  className="button outline"
-                  href="/Antonio-Indindoli-Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Download Resume
-                </a>
-              </div>
             </div>
             <div className="contact-grid">
               <a className="contact-card" >
@@ -206,9 +165,7 @@ const LandingPage = () => {
               <article key={project.title} className="project-card">
                 <div className="project-header">
                   <h3>{project.title}</h3>
-                  <p className="project-meta">{project.period} · {project.tech}</p>
                 </div>
-                <p className="project-description">{project.description}</p>
                 <ul className="project-highlights">
                   {project.highlights.map((highlight) => (
                     <li key={highlight}>{highlight}</li>
