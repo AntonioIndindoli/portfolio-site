@@ -143,6 +143,9 @@ const LandingPage = () => {
     <div className="landing-page" id="home">
       <Header />
       <main>
+
+        {/* Hero */}
+
         <section className="hero section" aria-labelledby="home-title">
           <div className="hero-content">
             <div className="hero-text">
@@ -161,7 +164,7 @@ const LandingPage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Download Résumé
+                  Download Resume
                 </a>
                 <a className="button ghost" href="#contact">Contact Me</a>
               </div>
@@ -174,6 +177,34 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Contact */}
+
+        <section className="section contact" id="contact" aria-labelledby="contact-title">
+          <div className="section-intro">
+            <h2 id="contact-title">Contact</h2>
+          </div>
+          <div className="contact-grid">
+            <a className="contact-card" >
+              <span className="contact-label">Email</span>
+              <span className="contact-value">indindoliantonio@gmail.com</span>
+            </a>
+            <a className="contact-card" >
+              <span className="contact-label">Phone</span>
+              <span className="contact-value">707-372-3995</span>
+            </a>
+            <a className="contact-card" href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
+              <span className="contact-label">LinkedIn</span>
+              <span className="contact-value">linkedin.com/in/indindoli</span>
+            </a>
+            <a className="contact-card" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
+              <span className="contact-label">GitHub</span>
+              <span className="contact-value">github.com/AntonioIndindoli</span>
+            </a>
+          </div>
+        </section>
+
+        {/* About */}
 
         <section className="section about" id="about" aria-labelledby="about-title">
           <div className="section-intro">
@@ -200,12 +231,23 @@ const LandingPage = () => {
           </div>
         </section>
 
+        {/* Education */}
+
+        <section className="section education" id="education" aria-labelledby="education-title">
+          <div className="section-intro">
+            <h2 id="education-title">Education</h2>
+          </div>
+          <div className="education-card">
+            <h3>San Francisco State University</h3>
+            <p>B.S. in Computer Science — May 2025</p>
+          </div>
+        </section>
+
+        {/* Skills */}
+
         <section className="section skills" id="skills" aria-labelledby="skills-title">
           <div className="section-intro">
             <h2 id="skills-title">Skills</h2>
-            <p>
-              A toolkit built from production releases and academic research, tuned for high-velocity teams.
-            </p>
           </div>
           <div className="skills-grid">
             {skills.map((category) => (
@@ -221,10 +263,11 @@ const LandingPage = () => {
           </div>
         </section>
 
+        {/* Projects */}
+
         <section className="section projects" id="projects" aria-labelledby="projects-title">
           <div className="section-intro">
             <h2 id="projects-title">Projects</h2>
-            <p>Selected releases that showcase my blend of systems thinking, player empathy, and shipping discipline.</p>
           </div>
           <div className="projects-grid">
             {projects.map((project) => (
@@ -251,30 +294,22 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section className="section education" id="education" aria-labelledby="education-title">
-          <div className="section-intro">
-            <h2 id="education-title">Education</h2>
-            <p>Grounded in computer science fundamentals with a focus on software engineering and interactive systems.</p>
-          </div>
-          <div className="education-card">
-            <h3>San Francisco State University</h3>
-            <p>B.S. in Computer Science — May 2025</p>
-          </div>
-        </section>
+        {/* Contributions */}
 
         <section className="section contributions" id="contributions" aria-labelledby="contributions-title">
           <div className="section-intro">
             <h2 id="contributions-title">GitHub Contributions</h2>
-            <p>Continual learning and iteration, tracked one green square at a time.</p>
           </div>
           <div className="contribution-chart">
             <img
-              src="https://ghchart.rshah.org/00d6ff/indindoli"
+              src="https://ghchart.rshah.org/00d6ff/AntonioIndindoli"
               alt="Antonio Indindoli&apos;s GitHub contribution chart"
               loading="lazy"
             />
           </div>
         </section>
+
+        {/* Gallery */}
 
         <section className="section gallery" id="gallery" aria-labelledby="gallery-title">
           <div className="section-intro">
@@ -288,31 +323,6 @@ const LandingPage = () => {
                 <figcaption>{item.caption}</figcaption>
               </figure>
             ))}
-          </div>
-        </section>
-
-        <section className="section contact" id="contact" aria-labelledby="contact-title">
-          <div className="section-intro">
-            <h2 id="contact-title">Let&apos;s Build Something</h2>
-            <p>Reach out for opportunities, collaborations, or to request a deep dive into any of my projects.</p>
-          </div>
-          <div className="contact-grid">
-            <a className="contact-card" href="mailto:indindoliantonio@gmail.com">
-              <span className="contact-label">Email</span>
-              <span className="contact-value">indindoliantonio@gmail.com</span>
-            </a>
-            <a className="contact-card" href="tel:+17073723995">
-              <span className="contact-label">Phone</span>
-              <span className="contact-value">707-372-3995</span>
-            </a>
-            <a className="contact-card" href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
-              <span className="contact-label">LinkedIn</span>
-              <span className="contact-value">linkedin.com/in/indindoli</span>
-            </a>
-            <a className="contact-card" href="https://github.com/indindoli" target="_blank" rel="noopener noreferrer">
-              <span className="contact-label">GitHub</span>
-              <span className="contact-value">github.com/indindoli</span>
-            </a>
           </div>
         </section>
       </main>

@@ -15,7 +15,6 @@ const Header = () => (
   <header className="site-header">
     <div className="header-inner">
       <a className="brand" href="#home">
-        <span className="brand-mark" aria-hidden="true">AI</span>
         <span className="brand-text">Antonio Indindoli</span>
       </a>
       <nav className="main-nav" aria-label="Primary">
@@ -31,7 +30,7 @@ const Header = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Résumé
+        View Resume
       </a>
     </div>
   </header>
