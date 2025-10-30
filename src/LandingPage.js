@@ -1,18 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import './LandingPage.css';
-import profilePhoto from './placeholder.png';
-import galleryOne from './images/backroomsGameImage.png';
-import galleryTwo from './images/Old4.png';
-import galleryThree from './images/HomeLogo.png';
-
-const quickFacts = [
-  '🎓 B.S. Computer Science, San Francisco State University (May 2025)',
-  '🚀 Shipped 2 commercial Unity products',
-  '💻 Skilled in C#, JavaScript, React, Unity',
-  '📍 Based in San Francisco, CA',
-];
 
 const skills = [
   {
@@ -120,24 +108,6 @@ const projects = [
   },
 ];
 
-const galleryItems = [
-  {
-    src: galleryOne,
-    alt: 'Unity horror prototype corridor lit in cool neon',
-    caption: 'Horror survival prototype showing modular lighting pass',
-  },
-  {
-    src: galleryTwo,
-    alt: 'Gameplay capture of destruction physics toolkit demo',
-    caption: 'Stress testing destruction toolkit with cascading debris',
-  },
-  {
-    src: galleryThree,
-    alt: 'Portal dashboard interface with teal accent cards',
-    caption: 'Community hub dashboard concept rendered in Unity UI',
-  },
-];
-
 const LandingPage = () => {
   return (
     <div className="landing-page" id="home">
@@ -146,13 +116,15 @@ const LandingPage = () => {
 
         {/* Hero */}
 
-        <section className="hero section" aria-labelledby="home-title">
-          <div className="hero-content">
-            <div className="hero-text">
-              <p className="intro-eyebrow">Hi, I&apos;m Antonio</p>
-              <h1 id="home-title">
-                Computer Science graduate who builds real software used by real players and developers.
-              </h1>
+        <section className="hero section" id="about" aria-labelledby="about-title">
+          <div className="hero-content about-hero-content">
+            <div className="about-hero-intro">
+              <p className="intro-eyebrow">About Me</p>
+              <h1 id="about-title">Antonio Indindoli</h1>
+              <p className="hero-subtitle">
+                Recent Computer Science graduate from San Francisco State University with hands-on experience shipping
+                commercial software, from games to full-stack web platforms.
+              </p>
               <div className="hero-actions">
                 <a className="button primary" href="#projects">View My Projects</a>
                 <a
@@ -165,67 +137,31 @@ const LandingPage = () => {
                 </a>
               </div>
             </div>
-            <div className="hero-visual" aria-hidden="true">
-              <div className="orbital" />
-              <div className="hero-photo-frame">
-                <img src={profilePhoto} alt="Antonio Indindoli smiling in front of a dark gradient background" />
-              </div>
+            <div className="contact-grid">
+              <a className="contact-card" >
+                <span className="contact-label">Email</span>
+                <span className="contact-value">indindoliantonio@gmail.com</span>
+              </a>
+              <a className="contact-card" >
+                <span className="contact-label">Phone</span>
+                <span className="contact-value">707-372-3995</span>
+              </a>
+              <a className="contact-card" href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
+                <span className="contact-label">LinkedIn</span>
+                <span className="contact-value">linkedin.com/in/indindoli</span>
+              </a>
+              <a className="contact-card" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
+                <span className="contact-label">GitHub</span>
+                <span className="contact-value">github.com/AntonioIndindoli</span>
+              </a>
             </div>
+
           </div>
         </section>
 
         {/* Contact */}
 
-        <section className="section contact" id="contact" aria-labelledby="contact-title">
-          <div className="section-intro">
-            <h2 id="contact-title">Contact</h2>
-          </div>
-          <div className="contact-grid">
-            <a className="contact-card" >
-              <span className="contact-label">Email</span>
-              <span className="contact-value">indindoliantonio@gmail.com</span>
-            </a>
-            <a className="contact-card" >
-              <span className="contact-label">Phone</span>
-              <span className="contact-value">707-372-3995</span>
-            </a>
-            <a className="contact-card" href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
-              <span className="contact-label">LinkedIn</span>
-              <span className="contact-value">linkedin.com/in/indindoli</span>
-            </a>
-            <a className="contact-card" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
-              <span className="contact-label">GitHub</span>
-              <span className="contact-value">github.com/AntonioIndindoli</span>
-            </a>
-          </div>
-        </section>
 
-        {/* About */}
-
-        <section className="section about" id="about" aria-labelledby="about-title">
-          <div className="section-intro">
-            <h2 id="about-title">About Me</h2>
-            <p>
-              I’m a recent Computer Science graduate from San Francisco State University with hands-on experience developing and shipping commercial software, from games to full-stack web platforms.
-            </p>
-          </div>
-          <div className="about-content">
-            <ul className="quick-facts" aria-label="Quick facts about Antonio">
-              {quickFacts.map((fact) => (
-                <li key={fact}>{fact}</li>
-              ))}
-            </ul>
-            <div className="about-highlight">
-              <h3>Why I build</h3>
-              <p>
-                Whether I’m prototyping destruction physics or fine-tuning REST APIs, I love solving problems that blend storytelling with scalable systems. My happiest moments are when players and developers ship with confidence because the tech just works.
-              </p>
-              <p>
-                I&apos;m currently looking for full-time roles in software development, game development, or IT where I can merge technical rigor with creative collaboration.
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* Education */}
 
@@ -305,24 +241,8 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Gallery */}
-
-        <section className="section gallery" id="gallery" aria-labelledby="gallery-title">
-          <div className="section-intro">
-            <h2 id="gallery-title">Unity Highlights</h2>
-            <p>Snapshots from gameplay captures and developer tooling I&apos;ve released.</p>
-          </div>
-          <div className="gallery-grid">
-            {galleryItems.map((item) => (
-              <figure key={item.caption} className="gallery-item">
-                <img src={item.src} alt={item.alt} loading="lazy" />
-                <figcaption>{item.caption}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </section>
       </main>
-      <Footer />
+
     </div>
   );
 };

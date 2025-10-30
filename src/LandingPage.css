@@ -27,28 +27,28 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 96px;
+  gap: 30px;
+  padding-bottom: 80px;
 }
 
 .section {
   position: relative;
-  padding: 30px 24px 0 24px;
+  padding: 0px 24px 0 24px;
   scroll-margin-top: 96px;
 }
 
 .section:last-of-type {
-  padding-bottom: 140px;
+  padding-bottom: 0px;
 }
 
 .section-intro {
   max-width: var(--max-width);
-  margin: 0 auto 48px;
+  margin: 0 auto 0px;
   text-align: left;
 }
 
 .section-intro h2 {
   font-size: clamp(32px, 4vw, 48px);
-  margin-bottom: 12px;
 }
 
 .section-intro p {
@@ -171,11 +171,31 @@ main {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 48px;
   align-items: center;
+  gap: 48px;
 }
 
-.hero-text h1 {
+.about-hero-content {
+
+}
+
+.about-hero-intro {
+  display: grid;
+  gap: 24px;
+}
+
+.about-hero-intro .hero-subtitle {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.about-hero-details {
+  display: grid;
+  gap: 24px;
+}
+
+.hero-text h1,
+.about-hero-intro h1 {
   font-size: clamp(36px, 6vw, 56px);
   line-height: 1.1;
   margin-bottom: 16px;
@@ -293,7 +313,7 @@ main {
   margin: 0 auto;
   display: grid;
   gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .quick-facts {
@@ -518,15 +538,15 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
   gap: 16px;
 }
 
 .contact-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 6px;
-  padding: 24px;
+  padding: 20px;
   background: var(--bg-card);
   border-radius: var(--radius-md);
   border: 1px solid rgba(0, 209, 255, 0.14);
@@ -596,11 +616,11 @@ main {
   }
 
   .hero {
-    padding-top: 140px;
+    padding-top: 180px;
   }
 
   .section {
-    padding-top: 50px;
+    padding-top: 10px;
   }
 }
 
@@ -625,4 +645,16 @@ main {
   .footer-inner {
     align-items: flex-start;
   }
+
+  .contact-label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.contact-value {
+  font-size: 15px;
+  font-weight: 600;
+}
 }
