@@ -1,6 +1,8 @@
 .logo-image {
-  max-height: 60px; /* Adjust based on your header's height */
-  max-width: 100%; /* Ensures it doesn't overflow its container */
+  max-height: 58px;
+  /* Adjust based on your header's height */
+  max-width: 100%;
+  /* Ensures it doesn't overflow its container */
   /* Centers the image in its container */
   display: block;
   padding-right: 10px;
@@ -10,15 +12,42 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 60%;
-  max-width: 800px;
+  width: 70%;
+  max-width: 1600px;
   margin: auto;
 
   z-index: 10000;
   margin-top: 0px;
-  height: 70px;
+  height: 90px;
   background: #f1f1f1;
 
+}
+
+.hero3d {
+  width: min(92vw, 960px);
+  max-height: 55vh;
+  margin: 0px;
+  background: transparent;
+}
+
+/* inner box sets the height via aspect-ratio */
+.hero3d .frame {
+  width: 100%;
+  max-height: 50vh;
+  aspect-ratio: 4 / 3;
+  /* change to 21/9, 4/3, etc. if you like */
+  background: transparent;
+  touch-action: none;
+  /* crucial for mobile! */
+  overscroll-behavior: contain;
+}
+
+/* ensure the canvas actually fills its box */
+.hero3d canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  background: transparent;
 }
 
 .header-items-bar {
@@ -56,12 +85,13 @@
 .header-bar-wrapper {
   position: fixed;
   width: 100%;
-  height: 70px;
+  height: 90px;
   background: #f1f1f1;
   z-index: 10000;
   top: 0px;
 
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  /* Optional: adds a subtle shadow */
 }
 
 .nav-button {
@@ -78,10 +108,7 @@
   font-size: 15px;
   font-weight: 700;
   word-wrap: break-word;
-  background-color: #015b8a;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 0px;
+  background-color: #000000;
   border: #ffffff00;
   border-radius: 5px;
 }
@@ -94,30 +121,72 @@
   height: 100%;
   z-index: 1;
 }
+
 /* Add this to your styles.css file */
 .Home-Message {
-  font-size: 50px; /* Adjust size as needed */
+  font-size: 70px;
+  /* Adjust size as needed */
   color: black;
   text-align: center;
-  font-weight: 700; /* Bold */
-  margin-top: 100px; /* Adjust margin as needed */
+  font-weight: 700;
+  /* Bold */
+  margin-top: 140px;
+  /* Adjust margin as needed */
+  z-index: 1;
+}
+
+.DSB-Home-Message {
+  font-size: 50px;
+  /* Adjust size as needed */
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  /* Bold */
+  margin-top: 30px;
+  /* Adjust margin as needed */
+  z-index: 1;
+}
+
+.About-Message {
+  font-size: 50px;
+  /* Adjust size as needed */
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  /* Bold */
+  margin-top: 100px;
+  /* Adjust margin as needed */
   z-index: 1;
 }
 
 .Home-Message-Subtext {
-  font-size: 16px; /* Adjust size as needed */
+  font-size: 16px;
+  /* Adjust size as needed */
   color: grey;
   text-align: center;
-  margin-top: 10px; /* Adjust margin as needed */
+  margin-top: 10px;
+  /* Adjust margin as needed */
   z-index: 1;
   font-style: italic;
 }
 
+.Home-Message-Subtext-nonItalic {
+  font-size: 20px;
+  /* Adjust size as needed */
+  color: grey;
+  text-align: center;
+  margin-top: 10px;
+  /* Adjust margin as needed */
+  z-index: 1;
+}
+
 .Home-Message-SubtextAlbum {
-  font-size: 18px; /* Adjust size as needed */
+  font-size: 18px;
+  /* Adjust size as needed */
   color: rgb(41, 41, 41);
   text-align: center;
-  margin-top: 10px; /* Adjust margin as needed */
+  margin-top: 10px;
+  /* Adjust margin as needed */
   z-index: 1;
 }
 
@@ -142,35 +211,84 @@
   background-color: darkgreen;
 }
 
+/* 1 — container defines the max height */
+.hero-banner {
+  width: 100%;
+  /* stays responsive but never exceeds 450 px */
+  height: clamp(200px, 50vh, 600px);
+  position: relative;
+  overflow: hidden;
+  /* hides cropped parts */
+}
+
+/* 2 — image stretches & centres */
+.hero-img {
+  position: absolute;
+  /* lets it fill the banner */
+  inset: 0;
+  /* shorthand for top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* zoom / crop so no letter-boxing */
+  object-position: center;
+  display: block;
+  /* removes default inline-img gap */
+}
+
+.pageLinkButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+.pageLinkButton:hover {
+  background-color: rgb(50, 55, 63);
+}
+
+.package-details {
+  color: rgb(36, 36, 36);
+}
+
 .Home-Projects {
-  font-size: 40px; /* Adjust size as needed */
+  font-size: 40px;
+  /* Adjust size as needed */
   color: black;
   text-align: left;
-  margin-top: 5vh;
   font-weight: 600;
   z-index: 1;
 }
 
 .Home-Projects-Subtext {
-  font-size: 18px; /* Adjust size as needed */
+  font-size: 18px;
+  /* Adjust size as needed */
   color: grey;
   text-align: left;
-  margin-top: 0px; /* Adjust margin as needed */
+  margin-top: 0px;
+  /* Adjust margin as needed */
   z-index: 1;
 }
 
 .background-gradient {
-  margin-top: 70px; /* Adjust margin as needed */
-  height: calc(
-    50vh - 150px
-  ); /* Adjusting height to account for header 
+  margin-top: 70px;
+  /* Adjust margin as needed */
+  height: calc(50vh - 150px);
+  /* Adjusting height to account for header 
 
   background: linear-gradient(to top, #ffffff 0%, #2e90b1 100%);*/
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* This makes the child (your image) align at the bottom */
+  align-items: flex-end;
+  /* This makes the child (your image) align at the bottom */
   min-height: 150px;
 }
+
 .background-gradient-color {
   width: 100%;
   height: calc(50vh - 150px);
@@ -183,14 +301,19 @@
 
 .box-center-image {
   position: absolute;
-  top: calc(20vh);
+  top: calc(10vh);
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* This makes the child (your image) align at the bottom */
+  align-items: flex-end;
+  /* This makes the child (your image) align at the bottom */
   z-index: 1;
-  
+}
+
+.background-center-image {
+  justify-content: center;
+  z-index: 1;
 }
 
 /* Adjusted .center-image class for the main image */
@@ -199,9 +322,14 @@
   z-index: 1;
 }
 
+.background-image {
+  max-width: 100%;
+}
+
 .main-image {
   max-width: 100%;
-  max-height: 30vh; /* or any other value that suits your design */
+  max-height: 45vh;
+  /* or any other value that suits your design */
   min-height: 120px;
   width: auto;
   height: auto;
@@ -218,31 +346,43 @@
 }
 
 .Home-Projects-Div {
-  width: 80%; /* Adjust this width to match the width of your cards container */
-  max-width: 800px; /* Prevents the container from getting too wide on large screens */
+  width: 80%;
+  /* Adjust this width to match the width of your cards container */
+  max-width: 1300px;
+  /* Prevents the container from getting too wide on large screens */
   z-index: 1;
 }
 
 .home-cards {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
-  gap: 10px; /* Space between cards */
-  padding: 10px 0; /* Top and bottom padding without affecting the horizontal */
+  flex-wrap: wrap;
+  /* Allows cards to wrap on smaller screens */
+  gap: 10px;
+  /* Space between cards */
+  padding: 10px 0;
+  /* Top and bottom padding without affecting the horizontal */
   z-index: 1;
 }
 
 /* Individual card styling */
 .card-div {
-  border: 2px solid #ebebeb; /* Solid outline with a blue color, adjust as needed */
-  border-radius: 8px; /* Optional: adds rounded corners */
+  border: 2px solid #ebebeb;
+  /* Solid outline with a blue color, adjust as needed */
+  border-radius: 8px;
+  /* Optional: adds rounded corners */
   text-align: center;
   margin: 0.5rem;
-  padding: 10px; /* Padding inside each card */
-  background-color: #f9f9f9; /* Light background color, adjust as needed */
-  width: 250px; /* Adjust based on your content size */
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
-  font-size: 16px; /* Adjust size as needed */
+  padding: 10px;
+  /* Padding inside each card */
+  background-color: #f9f9f9;
+  /* Light background color, adjust as needed */
+  width: 250px;
+  /* Adjust based on your content size */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  /* Optional: adds a subtle shadow */
+  font-size: 16px;
+  /* Adjust size as needed */
   color: rgb(124, 124, 124);
   text-align: left;
   z-index: 1;
@@ -250,16 +390,20 @@
 
 /* Adjusted card image styling */
 .card-image {
-  width: 100%; /* Makes the image responsive within the card */
-  height: auto; /* Maintains aspect ratio */
-  max-height: 280px; /* Limits the image height, adjust as needed */
-  object-fit: cover; /* Ensures the image covers the area, may crop */
-  border-bottom: 1px solid #ddd; /* Adds a subtle line between the image and caption */
+  width: 100%;
+  /* Makes the image responsive within the card */
+  height: auto;
+  /* Maintains aspect ratio */
+  max-height: 280px;
+  /* Limits the image height, adjust as needed */
+  object-fit: cover;
+  /* Ensures the image covers the area, may crop */
+  border-bottom: 1px solid #ddd;
+  /* Adds a subtle line between the image and caption */
   z-index: 1;
 }
 
 .site-footer {
-  margin-top: 50px;
   width: 100%;
   background-color: #f1f1f1;
   padding: 20px 0;
@@ -287,13 +431,45 @@
 }
 
 .center-divider {
-  height: 0; /* Ensure the divider is purely the border with no extra height */
-  border-top: 1px solid #ccc; /* A thin grey line */
-  width: 100%; /* 75% of its container's width */
-  margin: 0 auto; /* Center the divider within its container */
+  height: 0;
+  /* Ensure the divider is purely the border with no extra height */
+  border-top: 1px solid #ccc;
+  /* A thin grey line */
+  width: 100%;
+  /* 75% of its container's width */
+  margin: 0 auto;
+  /* Center the divider within its container */
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
+  .logo-image {
+    max-height: 50px;
+  }
+
+  .background-gradient {
+    margin-top: 70px;
+    /* Adjust margin as needed */
+    height: 30vh;
+    /* Adjusting height to account for header 
+
+  background: linear-gradient(to top, #ffffff 0%, #2e90b1 100%);*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* This makes the child (your image) align at the bottom */
+    min-height: 150px;
+  }
+
+  .background-gradient-color {
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    top: 70px;
+    background: linear-gradient(to top, #ffffff 0%, #2e90b1 100%);
+    z-index: 0;
+    min-height: 150px;
+  }
+
   .header-bar {
     width: 90%;
     max-width: 800px;
@@ -328,51 +504,75 @@
     height: 100%;
   }
 
+  .pageLinkButton {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
   .nav-button,
   .nav-button-black {
-    font-size: 13px; /* Smaller font size for mobile */
+    font-size: 13px;
+    /* Smaller font size for mobile */
   }
 
   .Home-Message {
-    font-size: 30px; /* Adjusted size for mobile */
-    margin-top: 10px; /* Adjust margin as needed */
+    font-size: 40px;
+    /* Adjusted size for mobile */
+    margin-top: 0px;
+    /* Adjust margin as needed */
   }
 
   .Home-Projects {
-    font-size: 30px; /* Adjusted size for mobile */
+    font-size: 30px;
+    /* Adjusted size for mobile */
   }
 
   .Home-Message-Subtext,
   .Home-Projects-Subtext {
-    font-size: 10px; /* Consistently adjusting subtexts and related headings */
+    font-size: 10px;
+    /* Consistently adjusting subtexts and related headings */
   }
 
   .box-center-image {
     position: absolute;
-    top: calc(15vh + 40px);
+    top: calc(5vh + 40px);
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* This makes the child (your image) align at the bottom */
+    align-items: flex-end;
+    /* This makes the child (your image) align at the bottom */
     z-index: 1;
   }
-  
+
   /* Adjusted .center-image class for the main image */
   .center-image {
     /* If you need to adjust the position further, consider using margin or padding here. */
     z-index: 1;
   }
-  
+
   .main-image {
     max-width: 100%;
-    max-height: 20vh; /* or any other value that suits your design */
+    max-height: 30vh;
+    /* or any other value that suits your design */
     width: auto;
     height: auto;
     z-index: 1;
   }
+
+  .hero3d .frame {
+    width: 100%;
+    max-height: 50vw;
+    aspect-ratio: 4 / 3;
+    /* change to 21/9, 4/3, etc. if you like */
+    background: transparent;
+    touch-action: none;
+    /* crucial for mobile! */
+    overscroll-behavior: contain;
+  }
 }
-@media (orientation: landscape) and (max-height: 500px) {
+
+@media (orientation: landscape) and (max-height: 700px) {
   .header-bar {
     width: 90%;
     max-width: 800px;
@@ -408,17 +608,21 @@
   }
 
   .Home-Message {
-    font-size: 40px; /* Adjusted size for mobile */
-    margin-top: 10px; /* Adjust margin as needed */
+    font-size: 40px;
+    /* Adjusted size for mobile */
+    margin-top: 120px;
+    /* Adjust margin as needed */
   }
 
   .Home-Projects {
-    font-size: 30px; /* Adjusted size for mobile */
+    font-size: 30px;
+    /* Adjusted size for mobile */
   }
 
   .Home-Message-Subtext,
   .Home-Projects-Subtext {
-    font-size: 13px; /* Consistently adjusting subtexts and related headings */
+    font-size: 13px;
+    /* Consistently adjusting subtexts and related headings */
   }
 
   .box-center-image {
@@ -428,22 +632,35 @@
     right: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* This makes the child (your image) align at the bottom */
+    align-items: flex-end;
+    /* This makes the child (your image) align at the bottom */
     z-index: 1;
   }
-  
+
   /* Adjusted .center-image class for the main image */
   .center-image {
     /* If you need to adjust the position further, consider using margin or padding here. */
     z-index: 1;
   }
-  
+
   .main-image {
     max-width: 100%;
-    max-height: 10vh; /* or any other value that suits your design */
+    max-height: 55vh;
+    /* or any other value that suits your design */
     width: auto;
     height: auto;
     z-index: 1;
+  }
+
+  .hero3d .frame {
+    width: 100%;
+    max-height: 30vh;
+    aspect-ratio: 4 / 3;
+    /* change to 21/9, 4/3, etc. if you like */
+    background: transparent;
+    touch-action: none;
+    /* crucial for mobile! */
+    overscroll-behavior: contain;
   }
 }
 
@@ -453,7 +670,8 @@
 .card-div {
   display: flex;
   flex-direction: column;
-  width: 300px; /* You can adjust based on your design */
+  width: 300px;
+  /* You can adjust based on your design */
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -470,7 +688,8 @@
 /* Image Styling */
 .card-image {
   width: 100%;
-  height: 180px; /* Adjust this to fit your design */
+  height: 180px;
+  /* Adjust this to fit your design */
   object-fit: cover;
   border-bottom: 1px solid #ccc;
 }
@@ -532,14 +751,14 @@
 /* Responsive Design */
 @media (max-width: 600px) {
   .card-div {
-      width: 100%;
+    width: 100%;
   }
 
   .card-content {
-      padding: 10px;
+    padding: 10px;
   }
 
   .card-description {
-      font-size: 12px;
+    font-size: 12px;
   }
 }

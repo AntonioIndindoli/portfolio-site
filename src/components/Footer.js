@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-content">
-        <p>© {new Date().getFullYear()} Antonio Indindoli. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} MayunsGames. Website created by Antonio Indindoli.</p>
         <div className="social-links">
-          <a target="_blank" rel="noopener noreferrer">Contact me at indindoliantonio@gmail.com</a>
+          <a target="_blank" rel="noopener noreferrer">Contact us at support@mayuns.com</a>
         </div>
       </div>
     </footer>

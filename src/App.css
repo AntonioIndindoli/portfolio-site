@@ -136,33 +136,41 @@
   width: 100%;
   background-color: 282c34;
 }
-.feed-container1{
-  width: 200px; /* Adjust this value to change the column's width relative to its siblings */
-  background-color: #eaeaea;
-  padding-top: 10px;
+
+.feed-container-row {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 90%;
+  /* Take full page width */
 }
-.feed-container3 {
-  width: 300px; /* Adjust this value to change the column's width relative to its siblings */
+
+.feed-container-row2 {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.feed-container1 {
+  flex: 1;
   background-color: #eaeaea;
   padding-top: 10px;
 }
 
 .feed-container2 {
-  max-width: 400px; /* This gives the feed container more space, making it more prominent */
+  flex: 4;
 }
 
-.feed-container-row {
-  padding-top: 120px;
-  display: flex;
-  justify-content: center; /* Center the columns horizontally */
-  align-items: start; /* Align items from the start vertically */
-  gap: 10px; /* Optional: adds space between columns */
-  margin: 0 auto; /* Center the row container in the middle of the page */
-  max-width: 900px; /* Adjust based on your preference */
+.feed-container3 {
+  flex: 2;
+  background-color: #eaeaea;
+  padding: 10px;
 }
-.feed-container-row2 {
-  flex-wrap: nowrap;
-}
+
 
 .button-bar {
   margin-left: 0px;
@@ -256,12 +264,15 @@
   background: linear-gradient(#f1f1f1, #f1f1f1);
   width: 70px;
 }
+
 .show-more-row:hover {
   color: #272727;
 }
+
 .show-more-row-wide:hover {
   color: #272727;
 }
+
 .show-more-row-wide {
   z-index: 1;
   padding-left: 22px;
@@ -376,11 +387,11 @@
   width: 100%;
   padding: 20px 20px 0px 20px;
   background: #f1f1f1;
-  margin-top: 10px;
+  margin-top: 1px;
 }
 
 .Post-img {
-  padding: 0px 10px 0px 10px;
+  padding: 20px 50px 20px 50px;
   width: 100%;
 }
 
@@ -413,6 +424,7 @@
   margin-right: 5px;
   object-fit: cover;
 }
+
 .post-comment-logo {
   width: 40px;
   margin-right: 5px;
@@ -436,7 +448,6 @@
 .Post-text-title {
   font-size: 15px;
   color: rgb(34, 122, 163);
-  word-break: break-all;
   text-decoration: none;
   background-color: #f1f1f1;
 }
@@ -445,9 +456,19 @@
   padding-left: 10px;
   padding-right: 15px;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 12px;
   color: rgb(0, 0, 0);
-  word-break: break-all;
+  text-decoration: none;
+  background-color: #f1f1f1;
+  word-break: keep-all;
+}
+
+.verification-status {
+  padding-left: 10px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: rgb(158, 158, 158);
   text-decoration: none;
   background-color: #f1f1f1;
 }
@@ -458,14 +479,12 @@
   margin: 0px;
   font-size: 12px;
   color: rgb(0, 0, 0);
-  word-break: break-all;
   text-decoration: none;
 }
 
 .Post-text-name {
   font-size: 15px;
   color: rgb(0, 0, 0);
-  word-break: break-all;
   text-decoration: none;
   background-color: #f1f1f1;
 }
@@ -473,7 +492,6 @@
 .Post-text-date {
   font-size: 15px;
   color: rgb(0, 0, 0);
-  word-break: break-all;
   text-decoration: none;
   background-color: #f1f1f1;
 }
@@ -529,7 +547,8 @@
 }
 
 .form-post-input-label-comment:focus {
-  outline: 0px solid #ffffff00; /* Example: changing to an orange outline */
+  outline: 0px solid #ffffff00;
+  /* Example: changing to an orange outline */
 }
 
 .form-post-input-profile {
@@ -581,12 +600,15 @@
 
 .post-header {
   display: flex;
-  align-items: center; /* Aligns the profile picture and the title/date vertically */
-  margin-bottom: 10px; /* Adjust as needed */
+  align-items: center;
+  /* Aligns the profile picture and the title/date vertically */
+  margin-bottom: 10px;
+  /* Adjust as needed */
 }
 
 .post-title-date {
-  margin-left: 0px; /* Adjust space between profile pic and text */
+  margin-left: 0px;
+  /* Adjust space between profile pic and text */
   display: flex;
   flex-direction: column;
 }
@@ -594,11 +616,13 @@
 .Post-text-title {
   margin: 0;
   font-weight: bold;
-  color: rgb(0, 66, 128); /* Adjust as needed */
+  color: rgb(0, 66, 128);
+  /* Adjust as needed */
 }
 
 .post-date {
-  font-size: 0.7rem; /* Smaller font size for date */
+  font-size: 0.7rem;
+  /* Smaller font size for date */
   color: grey;
 }
 
@@ -633,7 +657,7 @@
 
 @media (max-width: 800px) {
   .group-feed {
-    padding: 0px 15px 0px 60px;
+    padding: 0px 0px 0px 0px;
     min-width: 100vw;
   }
 
@@ -641,18 +665,23 @@
     padding: 0px 0px 0px 0px;
     width: 100%;
   }
+
   .hide-on-mobile {
-    display: none; /* Hide on small screens */
+    display: none;
+    /* Hide on small screens */
   }
+
   .feed-container2 {
-    max-width: 100%; /* This gives the feed container more space, making it more prominent */
+    max-width: 100%;
+    /* This gives the feed container more space, making it more prominent */
   }
 }
 
 /* Adjust or remove styles from .sidenav-button */
 .sidenav-button {
   /* Removed positioning styles */
-  z-index: 1000; /* Keep if you need the buttons to be on top of other elements */
+  z-index: 1000;
+  /* Keep if you need the buttons to be on top of other elements */
 }
 
 .nav-button-side {
@@ -668,12 +697,14 @@
   border: #ffffff00;
   border-radius: 5px;
   margin-bottom: 15px;
-  width: 90%; /* Consider adjusting if the button size is not appropriate */
+  width: 90%;
+  /* Consider adjusting if the button size is not appropriate */
   /* Removed 'top' as it's not effective without position:relative/absolute/fixed */
 }
 
 .sidenav.open {
-  width: 300px; /* Adjusted width for when the sidenav is open */
+  width: 300px;
+  /* Adjusted width for when the sidenav is open */
 }
 
 .sidenav {
@@ -682,7 +713,8 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: 45px; /* Adjust based on your design */
+  width: 45px;
+  /* Adjust based on your design */
   overflow-x: hidden;
   transition: 0.5s;
   background-color: #f1f1f1;
@@ -695,11 +727,16 @@
 }
 
 .sidenav-arrow {
-  position: absolute; /* Position relative to `.sidenav` boundaries */
-  right: 0; /* Align it to the right side of `.sidenav` */
-  top: 0px; /* Start from the top */
-  bottom: 0; /* Extend to the bottom */
-  width: 40px; /* Or adjust as needed for the width of the arrow */
+  position: absolute;
+  /* Position relative to `.sidenav` boundaries */
+  right: 0;
+  /* Align it to the right side of `.sidenav` */
+  top: 0px;
+  /* Start from the top */
+  bottom: 0;
+  /* Extend to the bottom */
+  width: 40px;
+  /* Or adjust as needed for the width of the arrow */
 
   padding: 5px;
   padding-top: 50px;
@@ -719,12 +756,14 @@
   text-align: left;
   background-color: #eaeaea;
 }
+
 .thread-list-text-input {
   width: 100%;
   padding: 5px;
   border: #000000;
   text-align: left;
 }
+
 .thread-list-text {
   color: rgb(32, 97, 172);
   font-size: 15px;
@@ -736,6 +775,7 @@
   text-decoration: none;
   text-align: left;
 }
+
 .thread-list-submit {
   color: rgb(255, 255, 255);
   font-size: 15px;
@@ -746,9 +786,12 @@
   border: #ffffff00;
   border-radius: 5px;
   height: 34px;
-  width: 100%; /* Consider adjusting if the button size is not appropriate */
+  width: 100%;
+  /* Consider adjusting if the button size is not appropriate */
   /* Removed 'top' as it's not effective without position:relative/absolute/fixed */
-}.thread-list-cancel {
+}
+
+.thread-list-cancel {
   color: rgb(255, 255, 255);
   font-size: 15px;
   font-weight: 700;
@@ -758,6 +801,7 @@
   border: #ffffff00;
   border-radius: 5px;
   height: 34px;
-  width: 100%; /* Consider adjusting if the button size is not appropriate */
+  width: 100%;
+  /* Consider adjusting if the button size is not appropriate */
   /* Removed 'top' as it's not effective without position:relative/absolute/fixed */
 }
