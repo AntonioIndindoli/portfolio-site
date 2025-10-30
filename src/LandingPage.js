@@ -153,9 +153,6 @@ const LandingPage = () => {
               <h1 id="home-title">
                 Computer Science graduate who builds real software used by real players and developers.
               </h1>
-              <p className="hero-subtitle">
-                Full-Stack Developer • Game Developer • System Designer
-              </p>
               <div className="hero-actions">
                 <a className="button primary" href="#projects">View My Projects</a>
                 <a
@@ -166,7 +163,6 @@ const LandingPage = () => {
                 >
                   Download Resume
                 </a>
-                <a className="button ghost" href="#contact">Contact Me</a>
               </div>
             </div>
             <div className="hero-visual" aria-hidden="true">

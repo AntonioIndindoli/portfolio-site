@@ -32,7 +32,7 @@ main {
 
 .section {
   position: relative;
-  padding: 120px 24px 0 24px;
+  padding: 30px 24px 0 24px;
   scroll-margin-top: 96px;
 }
 
@@ -600,7 +600,7 @@ main {
   }
 
   .section {
-    padding-top: 100px;
+    padding-top: 50px;
   }
 }
 
