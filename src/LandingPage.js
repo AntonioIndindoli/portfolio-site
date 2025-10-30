@@ -30,7 +30,7 @@ const projects = [
       'Optimized rendering of thousands of models and dynamic lights in a scene to achieve over 60 FPS on typical PCs.',
       'Oversaw all aspects of production — from prototyping to publishing and player feedback integration.',
     ],
-    links: [],
+    links: [{ label: 'View on Steam', href: 'https://store.steampowered.com/app/2816710/The_Backrooms_Unseen_Tapes/' }],
   },
   {
     title: 'Self-Published Unity Destruction Physics Toolkit',
@@ -40,7 +40,7 @@ const projects = [
       'Simplified developer workflows through custom tools for building structures all within the Unity Editor.',
       'Provided comprehensive documentation for easy adoption by other developers.',
     ],
-    links: [],
+    links: [{ label: 'Asset Store', href: 'https://mayuns.com' }],
   },
   {
     title: 'Full-Stack University Matching Platform',
@@ -48,7 +48,7 @@ const projects = [
       'Led the backend development of a platform that connects student-athletes with universities.',
       'Devised a proprietary sorting algorithm to rank Universities based on data from 5,000+ U.S. Olympians.',
     ],
-    links: [],
+    links: [{ label: 'Github', href: 'https://github.com/AntonioIndindoli/Aspiro' }],
   },
   {
     title: 'Real-Time Online Poker Platform',
@@ -57,7 +57,7 @@ const projects = [
       'Implemented synchronized game state, chat, and session management for concurrent users.',
       'Utilized PostgreSQL for scalable data persistence and reliability.',
     ],
-    links: [],
+    links: [{ label: 'Github', href: 'https://github.com/csc-667-spring-2023-roberts/team-zed-repo' }],
   },
   {
     title: 'Game Development Portfolio Website',
@@ -66,7 +66,7 @@ const projects = [
       'Focused on clean visual presentation, responsive layout, and accessible design for desktop and mobile.',
       'Built a lightweight, static architecture optimized for performance and low hosting overhead.',
     ],
-    links: [],
+    links: [{ label: 'Visit Site', href: 'https://mayuns.com' }, { label: 'Github', href: 'https://github.com/AntonioIndindoli/CompanyWebsite_Production'}],
   },
   {
     title: 'Linux Storage Device Driver',
@@ -74,7 +74,7 @@ const projects = [
       'Configured and maintained a custom Linux virtual environment to develop and test a storage driver.',
       'Gained hands-on experience with Linux system configuration and memory management at the OS level.',
     ],
-    links: [],
+    links: [{ label: 'Github', href: 'https://github.com/AntonioIndindoli/Linux-Storage-Device-Driver' }],
   },
 ];
 
@@ -98,19 +98,15 @@ const LandingPage = () => {
             </div>
             <div className="contact-grid">
               <a className="contact-card" >
-                <span className="contact-label">Email</span>
                 <span className="contact-value">indindoliantonio@gmail.com</span>
               </a>
               <a className="contact-card" >
-                <span className="contact-label">Phone</span>
                 <span className="contact-value">707-372-3995</span>
               </a>
               <a className="contact-card" href="https://linkedin.com/in/indindoli" target="_blank" rel="noopener noreferrer">
-                <span className="contact-label">LinkedIn</span>
                 <span className="contact-value">linkedin.com/in/indindoli</span>
               </a>
               <a className="contact-card" href="https://github.com/AntonioIndindoli" target="_blank" rel="noopener noreferrer">
-                <span className="contact-label">GitHub</span>
                 <span className="contact-value">github.com/AntonioIndindoli</span>
               </a>
             </div>
