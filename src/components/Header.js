@@ -1,34 +1,40 @@
-import React from "react";
-import "../LandingPage.css";
-import logo from "../images/mayunays.netlogo.png";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import '../LandingPage.css';
 
-const Header = () => {
-  const navigate = useNavigate();
+const navLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' },
+  { href: '#contributions', label: 'Contributions' },
+  { href: '#gallery', label: 'Gallery' },
+  { href: '#contact', label: 'Contact' },
+];
 
-  return (
-    <div className="header-bar-wrapper">
-      <div className="header-bar">
-        <header className="header-items">
-          <button
-            className="MayunsGames-button"
-            onClick={() => navigate("/")}
-          >
-            <img src={logo} className="logo-image" />
-          </button>
-            <div className="header-items-bar">
-              <button
-                className="nav-button"
-                type="button"
-                onClick={() => navigate("/about")}
-              >
-                About
-              </button>
-            </div>
-        </header>
-      </div>
+const Header = () => (
+  <header className="site-header">
+    <div className="header-inner">
+      <a className="brand" href="#home">
+        <span className="brand-mark" aria-hidden="true">AI</span>
+        <span className="brand-text">Antonio Indindoli</span>
+      </a>
+      <nav className="main-nav" aria-label="Primary">
+        {navLinks.map((link) => (
+          <a key={link.href} href={link.href} className="nav-link">
+            {link.label}
+          </a>
+        ))}
+      </nav>
+      <a
+        className="resume-chip"
+        href="/Antonio-Indindoli-Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Résumé
+      </a>
     </div>
-  );
-};
+  </header>
+);
 
 export default Header;
