@@ -17,7 +17,7 @@ const skills = [
   },
   {
     title: 'Core Skills',
-    items: ['Full-stack web development', 'Game development', 'System design', 'Server setup', 'Optimization'],
+    items: ['Full-stack web development', 'Game development', 'System design', 'Server setup'],
   },
 ];
 
@@ -66,7 +66,7 @@ const projects = [
       'Focused on clean visual presentation, responsive layout, and accessible design for desktop and mobile.',
       'Built a lightweight, static architecture optimized for performance and low hosting overhead.',
     ],
-    links: [{ label: 'Visit Site', href: 'https://mayuns.com' }, { label: 'Github', href: 'https://github.com/AntonioIndindoli/CompanyWebsite_Production'}],
+    links: [{ label: 'Visit Site', href: 'https://mayuns.com' }, { label: 'Github', href: 'https://github.com/AntonioIndindoli/CompanyWebsite_Production' }],
   },
   {
     title: 'Linux Storage Device Driver',
@@ -187,9 +187,8 @@ const LandingPage = () => {
           </div>
           <div className="contribution-chart">
             <img
-              src="https://ghchart.rshah.org/00d6ff/AntonioIndindoli"
-              alt="Antonio Indindoli&apos;s GitHub contribution chart"
-              loading="lazy"
+              src="https://ghchart.rshah.org/39d353/AntonioIndindoli"
+              alt="Antonio Indindoli’s GitHub contribution chart"
             />
           </div>
         </section>
