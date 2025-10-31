@@ -17,7 +17,7 @@ const skills = [
   },
   {
     title: 'Core Skills',
-    items: ['Full-stack web development', 'Game development', 'System design', 'Server setup'],
+    items: ['Full-stack web development', 'Game development', 'System design'],
   },
 ];
 
