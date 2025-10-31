@@ -40,7 +40,7 @@ const projects = [
       'Simplified developer workflows through custom tools for building structures all within the Unity Editor.',
       'Provided comprehensive documentation for easy adoption by other developers.',
     ],
-    links: [{ label: 'Asset Store', href: 'https://mayuns.com' }],
+    links: [{ label: 'Asset Store', href: 'https://mayuns.com/#/destructible-structure-builder' }],
   },
   {
     title: 'Full-Stack University Matching Platform',
@@ -87,7 +87,7 @@ const LandingPage = () => {
         {/* Hero */}
 
         <section className="hero section" id="about" aria-labelledby="about-title">
-          <div className="hero-content about-hero-content">
+          <div className="hero-content">
             <div className="about-hero-intro">
               <p className="intro-eyebrow">About Me</p>
               <h1 id="about-title">Antonio Indindoli</h1>
