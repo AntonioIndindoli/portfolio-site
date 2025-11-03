@@ -18,8 +18,8 @@
 
 .landing-page {
   min-height: 100vh;
-  background: radial-gradient(circle at 20% -20%, rgba(22, 39, 54, 0.15) 0%, transparent 55%),
-    radial-gradient(circle at 80% 0%, rgba(12, 16, 27, 0.12) 0%, transparent 50%),
+  background: radial-gradient(circle at 20% -20%, rgba(78, 131, 175, 0.15) 0%, transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(18, 51, 139, 0.12) 0%, transparent 50%),
     linear-gradient(180deg, rgba(20, 26, 29, 0.95) 0%, rgba(5, 6, 15, 0.98) 100%);
   color: var(--text-primary);
 }
